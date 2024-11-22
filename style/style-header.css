@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-width: 600px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    background-color: #040510f2;
+}
+
+.cabecalho {
+    background-color: #020202;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.078);
+    height: 80px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 200;
+}
+
+.cabecalho img {
+    display: flex;
+    width: 60px;
+    filter: invert(100%);
+    /* margin: 165px; */
+}
+
+.itensHeader {
+    display: flex;
+    align-items: center;
+    color: white;
+    /* padding: 200px; */
+}
+
+.itensHeader ul li {
+    font-size: 18px;
+    display: inline;
+    margin-right: 50px;
+}
+
+.itensHeader ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.itensHeader ul li a:hover {
+    text-decoration: none;
+    color:#929fff;
+}
+
+footer {
+    background-color: #252525;
+    height: 130px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 670px) {
+    .cabecalho {
+        height: 50px;
+        width: 100%;
+    }
+
+    .cabecalho img {
+        width: 125px;
+    }
+    
+    .itensHeader ul li {
+        font-size: 14px;
+        margin: 0px 9px;
+    }
+    
+    footer {
+        height: 80px;
+        font-size: 10px;
+    }
+}
+

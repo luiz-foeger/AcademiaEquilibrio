@@ -1,0 +1,25 @@
+.section1 {
+    background-color: #fff;
+    padding: 8px;
+    text-align: center;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    color: #040510f5;
+    display: flex;
+    flex-direction: row;
+}
+
+.section1 img {
+    width: 49%;
+    margin: 0;
+}
+
+.section1 p {
+    font-size: 20px;
+}
+
+.section1 h3 {
+    font-size: 25px;
+}
+
