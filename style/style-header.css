@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&&family=Inter&family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Mea+Culpa&family=Inter:wght@100..900&display=swap');
+
+
+
+@media screen and (max-width: 670px) {
+    footer {
+        height: 80px;
+        font-size: 10px;
+    }
+}
 
 * {
     margin: 0;
@@ -54,17 +64,23 @@ body {
 
 .itensHeader ul li a:hover {
     text-decoration: none;
-    color:#fdb817;
+    color: #fdb817;
 }
 
 footer {
-    background-color: #252525;
+    background-color: #020202;
     height: 130px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
 }
+
+footer p {
+    font-family: Inter, sans serif;
+}
+
 
 @media screen and (max-width: 670px) {
     .cabecalho {
@@ -75,12 +91,12 @@ footer {
     .cabecalho img {
         width: 125px;
     }
-    
+
     .itensHeader ul li {
         font-size: 14px;
         margin: 0px 9px;
     }
-    
+
     footer {
         height: 80px;
         font-size: 10px;

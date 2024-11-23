@@ -4,13 +4,23 @@
     background-color: #fff;
 }
 
+h2 {
+    font-size: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+p {
+    margin: 10px 0 20px;
+    font-family: 'Parkinsans', sans-serif;
+}
+
 .section-info {
     background-color: #fff;
     padding: 8px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 45px;
+    padding: 65px;
 }
 
 .section-info img {
@@ -20,11 +30,6 @@
     object-fit: cover;
 }
 
-.section-info h4 {
-    font-size: 50px;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
 .section-info div {
     margin-left: 30px;
     width: 570px;
@@ -32,13 +37,13 @@
 
 .section-info p {
     color: #010114A3;
-    margin: 10px 0 20px;
-    font-family: 'Parkinsans', sans-serif;
 }
 
 .section-info strong {
     color: #fdb817;
 }
+
+/* ---------------------- //  ---------------------- */
 
 .section-servicos {
     /* background-color: #020202; */
@@ -57,11 +62,20 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    -webkit-box-shadow: 0px 0px 45px -15px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 0px 45px -15px rgba(0,0,0,0.3);
-    box-shadow: 0px 0px 45px -15px rgba(0,0,0,0.3);
-border-radius: 20px;      
+    -webkit-box-shadow: 0px 0px 45px -15px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 45px -15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 45px -15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    transition: ease 0.3s;
     /* color: #fff; */
+}
+
+.card-servicos:hover {
+    scale: 1.01;
+}
+
+.card-servicos:hover img {
+    filter: grayscale(0%);
 }
 
 /* .card-servicos:hover h3{
@@ -106,4 +120,35 @@ border-radius: 20px;
     font-size: 40px;
     color: #000;
     font-family: 'Bebas Neue', sans-serif;
+}
+
+/* ---------------------- //  ---------------------- */
+
+.section-local {
+    background-color: #020202;
+    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 45px;
+    height: 550px;
+    color: #fff;
+}
+
+.section-local div {
+    margin-left: 30px;
+    width: 570px;
+}
+
+.section-local img {
+    width: 570px;
+    height: 450px;
+    margin: 0;
+    object-fit: cover;
+    /* filter: grayscale(100%); */
+}
+
+.section-local iframe {
+    width: 550px;
+    height: 250px;
 }
