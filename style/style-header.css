@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 html {
@@ -15,7 +14,7 @@ body {
     min-width: 600px;
     margin: 0 auto;
     overflow-x: hidden;
-    background-color: #040510f2;
+    /* background-color: #040510f2; */
 }
 
 .cabecalho {
@@ -40,11 +39,10 @@ body {
     display: flex;
     align-items: center;
     color: white;
-    /* padding: 200px; */
 }
 
 .itensHeader ul li {
-    font-size: 18px;
+    font-size: 17px;
     display: inline;
     margin-right: 50px;
 }
@@ -56,7 +54,7 @@ body {
 
 .itensHeader ul li a:hover {
     text-decoration: none;
-    color:#fff692;
+    color:#fdb817;
 }
 
 footer {

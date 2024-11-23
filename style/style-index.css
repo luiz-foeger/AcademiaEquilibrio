@@ -1,64 +1,109 @@
-.section1 {
+#banner {
+    width: 100%;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.section-info {
     background-color: #fff;
     padding: 8px;
-    /* text-align: center; */
-    font-weight: 200;
-    font-size: 30px;
-    color: #040510f5;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 45px;
 }
 
-/* 
-.section1 img {
-    width: 4%;
-    height: 20%;
-    margin: 0;
-    object-fit: cover;
-} */
-#banner {
-    width: 100%;
-    height: 580px;
-    object-fit: cover;
-    filter: grayscale(50%)
-}
-
-.section1 img {
-    width: 590px;
+.section-info img {
+    width: 570px;
     height: 450px;
     margin: 0;
     object-fit: cover;
 }
 
-.section1 p {
-    font-size: 17px;
-    color: rgba(0, 0, 0, 0.39);
+.section-info h4 {
+    font-size: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.section-info div {
+    margin-left: 30px;
+    width: 570px;
+}
+
+.section-info p {
+    color: #010114A3;
     margin: 10px 0 20px;
     font-family: 'Parkinsans', sans-serif;
 }
 
-.section1 div {
-    margin-left: 30px;
+.section-info strong {
+    color: #fdb817;
 }
 
-.section1 h4 {
-    font-size: 40px;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-.section2    {
-    background-color: #fff;
+.section-servicos {
+    /* background-color: #020202; */
     padding: 8px;
-    /* text-align: center; */
-    font-weight: 200;
-    font-size: 30px;
-    color: #040510f5;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 45px;
+    height: 550px;
+}
+
+.card-servicos {
+    /* background-color: #020202ef; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 45px -15px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 45px -15px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 45px -15px rgba(0,0,0,0.3);
+border-radius: 20px;      
+    /* color: #fff; */
+}
+
+/* .card-servicos:hover h3{
+    display: flex;
+} */
+
+.card-servicos img {
+    width: 350px;
+    height: 180px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+.card-servicos p {
+    max-width: 350px;
+    color: #010114A3;
+    margin: 10px 0 20px;
+    font-family: 'Parkinsans', sans-serif;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.card-servicos h3 {
+    /* display: none; */
+    display: flex;
+    font-size: 40px;
+    color: #fff;
+    width: 350px;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -152px;
+    border-radius: 20px 20px 0 0;
+    background-color: #000000a0;
+    font-family: 'Bebas Neue', sans-serif;
+    position: absolute;
+}
+
+.section-servicos strong {
+    font-size: 40px;
+    color: #000;
+    font-family: 'Bebas Neue', sans-serif;
 }
