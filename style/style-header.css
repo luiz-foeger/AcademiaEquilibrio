@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Parkinsans:wght@300..800&display=swap');
 
 * {
     margin: 0;
@@ -10,7 +10,6 @@
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     min-width: 600px;
@@ -27,7 +26,7 @@ body {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.078);
     height: 80px;
     font-family: 'Parkinsans', sans-serif;
-    font-weight: 200;
+    font-weight: 600;
 }
 
 .cabecalho img {
@@ -57,7 +56,7 @@ body {
 
 .itensHeader ul li a:hover {
     text-decoration: none;
-    color:#929fff;
+    color:#fff692;
 }
 
 footer {
@@ -89,4 +88,3 @@ footer {
         font-size: 10px;
     }
 }
-
