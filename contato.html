@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style-header.css">
     <link rel="stylesheet" href="/style/style-contato.css">
-    <link rel="shortcut icon" href="/img/icon-EA.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
     <title>Academia Equilibrio - Início</title>
 </head>
 
@@ -31,28 +31,41 @@
     </header>
     <main>
         <form action="">
+            <!-- <h1>Personalizamos seu treino com base nas suas informações</h1> -->
             <section class="informacoes">
+                <label for="nomeSobrenome">Nome:</label>
+                <input type="text" id="nomeSobrenome" placeholder="Nome completo" required>
+
                 <section>
                     <div>
-                        <label for="nomeSobrenome">Nome:</label>
-                        <input class="input-block" type="text" id="nomeSobrenome" placeholder="Primeiro nome" required>
+                        <label for="nomeSobrenome">Idade:</label>
+                        <input type="number" id="idade" placeholder="Sua idade" required>
                     </div>
+
                     <div>
-                        <label for="nomeSobrenome">Sobrenome:</label>
-                        <input class="input-block" type="text" id="nomeSobrenome" placeholder="Sobrenome" required>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" placeholder="+55 (11) 99999-8888" required>
                     </div>
                 </section>
 
                 <label for="email">Seu melhor E-mail:</label>
-                <input class="input-block" type="email" id="email" placeholder="email@dominio.com" required>
+                <input type="email" id="email" placeholder="email@dominio.com" required>
 
-                <label for="telefone">Telefone:</label>
-                <input class="input-block" type="tel" id="telefone" placeholder="+55 (00) 00000-0000" required>
+                <section>
+                    <div>
+                        <label for="nomeSobrenome">Altura:</label>
+                        <input type="number" id="nomeSobrenome" placeholder="Ex: 1,75" required>
+                    </div>
+                    <div>
+                        <label for="nomeSobrenome">Peso:</label>
+                        <input type="text" id="nomeSobrenome" placeholder="Peso em Kg" required>
+                    </div>
+                </section>
 
                 <label for="mensagem">Mensagem: <p>(opcional)</p></label>
-                <textarea class="input-block" id="mensagem" cols="30" rows="10"></textarea>
-
+                <textarea id="mensagem" cols="30" rows="10"></textarea>
             </section>
+
             <fieldset>
                 <legend>Qual horário prefere ser atendido?</legend>
                 <ul class="list">
@@ -91,7 +104,7 @@
             </div>
             <div class="checkbox">
 
-                <input id="checkbox-novidades" type="checkbox">
+                <input id="checkbox-novidades" type="checkbox" checked>
                 <label for="checkbox-novidades">Gostaria de receber nossas novidades por E-mail?</label>
             </div>
             <input class="button" type="submit" value="concluir">

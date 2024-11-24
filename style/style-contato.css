@@ -6,6 +6,8 @@ main {
     justify-content: center;
 }
 
+/* ---------------------- // ---------------------- */
+
 .informacoes label {
     font-size: 30px;
     font-family: 'Bebas Neue', sans-serif;
@@ -39,6 +41,8 @@ main {
     margin-bottom: 30px;
 }
 
+/* ---------------------- // ---------------------- */
+
 form {
     margin: 40px 0 60px;
 }
@@ -48,6 +52,7 @@ fieldset {
     border: solid 1px #ccc;
     border-radius: 5px;
     padding: 8px 10px;
+    margin-bottom: 30px;
 }
 
 legend {
@@ -73,6 +78,8 @@ textarea {
     margin-bottom: 30px;
     resize: none;
 }
+
+/* ---------------------- // ---------------------- */
 
 .preferencia-contato {
     margin: 20px 0;
@@ -105,16 +112,6 @@ textarea {
     text-align: center;
 }
 
-select option:hover {
-    background-color: #fdb817;
-}
-
-/* .checkbox {
-    font-family: 'Parkinsans', sans-serif;
-    font-size: 15px;
-    margin: 30px 0;
-} */
-
 .button {
     font-family: 'Bebas Neue', sans-serif;
     width: 471px;
@@ -136,7 +133,6 @@ select option:hover {
 
 .button:active {
     scale: 0.99;
-    /* background-color: #fdb817; */
 }
 
 form label {
@@ -144,6 +140,7 @@ form label {
     margin: 0 0 10px;
 }
 
+/* ---------------------- // ---------------------- */
 
 /* table {
     margin: 40px auto;
@@ -162,10 +159,6 @@ th {
     padding: 3px;
     font-size: 20px;
 } */
-
-.list__item {
-    list-style: none;
-}
 
 .radio {
     position: relative;
@@ -213,9 +206,16 @@ th {
     border-radius: 50%;
 }
 
+.list__item {
+    list-style: none;
+}
+
 li.list__item::marker {
     display: none;
 }
+
+/* ---------------------- // ---------------------- */
+
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
     .checkbox {
@@ -223,6 +223,15 @@ li.list__item::marker {
         font-size: 15px;
         margin: 30px 0;
         text-align: center;
+    }
+
+    .checkbox * {
+        box-sizing: inherit;
+    }
+
+    .checkbox *:before,
+    .checkbox *:after {
+        box-sizing: inherit;
     }
 
     .checkbox input[type=checkbox] {
@@ -325,13 +334,4 @@ li.list__item::marker {
     .checkbox input[type=checkbox]:not(.switch):checked {
         --r: 43deg;
     }
-}
-
-.checkbox * {
-    box-sizing: inherit;
-}
-
-.checkbox *:before,
-.checkbox *:after {
-    box-sizing: inherit;
 }
