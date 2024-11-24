@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style-header.css">
+    <link rel="stylesheet" href="/style/style-contato.css">
+    <link rel="shortcut icon" href="/img/icon-EA.png" type="image/x-icon" />
+    <title>Academia Equilibrio - Início</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div>
+            <a href="index.html"><img src="./img/logo.png" alt="Logo Academia Equilibrio"></a>
+        </div>
+        <nav class="itensHeader">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="index.html">Serviços</a>
+                </li>
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="">
+            <section class="informacoes">
+                <section>
+                    <div>
+                        <label for="nomeSobrenome">Nome:</label>
+                        <input class="input-block" type="text" id="nomeSobrenome" placeholder="Primeiro nome" required>
+                    </div>
+                    <div>
+                        <label for="nomeSobrenome">Sobrenome:</label>
+                        <input class="input-block" type="text" id="nomeSobrenome" placeholder="Sobrenome" required>
+                    </div>
+                </section>
+
+                <label for="email">Seu melhor E-mail:</label>
+                <input class="input-block" type="email" id="email" placeholder="email@dominio.com" required>
+
+                <label for="telefone">Telefone:</label>
+                <input class="input-block" type="tel" id="telefone" placeholder="+55 (00) 00000-0000" required>
+
+                <label for="mensagem">Mensagem: <p>(opcional)</p></label>
+                <textarea class="input-block" id="mensagem" cols="30" rows="10"></textarea>
+
+            </section>
+            <fieldset>
+                <legend>Qual horário prefere ser atendido?</legend>
+                <ul class="list">
+                    <li class="list__item">
+                        <label class="label--radio">
+                            <input type="radio" class="radio" checked name="foo">
+                            Manhã
+                        </label>
+                    </li>
+                    <li class="list__item">
+                        <label class="label--radio">
+                            <input type="radio" class="radio" name="foo">
+                            Tarde
+                        </label>
+                    </li>
+                    <li class="list__item">
+                        <label class="label--radio">
+                            <input type="radio" class="radio" name="foo">
+                            Noite
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <div>
+                <fieldset class="preferencia-contato">
+                    <legend>Como prefere nosso contato?</legend>
+                    <select id="caixaSelecionar">
+                        <option value="selecionar" selected disabled>Selecionar</option>
+                        <option value="manha">WhatsApp</option>
+                        <option value="tarde">E-mail</option>
+                        <option value="noite">Telefone</option>
+                    </select>
+                </fieldset>
+
+            </div>
+            <div class="checkbox">
+
+                <input id="checkbox-novidades" type="checkbox">
+                <label for="checkbox-novidades">Gostaria de receber nossas novidades por E-mail?</label>
+            </div>
+            <input class="button" type="submit" value="concluir">
+
+        </form>
+        <!-- <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Horários de Funcionamento:</th>
+                </tr>
+                <th>Dia</th>
+                <th>Horário</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segunda-Feira</td>
+                    <td>6h às 21h</td>
+                </tr>
+                <tr>
+                    <td>Terça-Feira</td>
+                    <td>6h às 21h</td>
+                </tr>
+                <tr>
+                    <td>Quarta-Feira</td>
+                    <td>6h às 21h</td>
+                </tr>
+                <tr>
+                    <td>Quinta-Feira</td>
+                    <td>6h às 21h</td>
+                </tr>
+                <tr>
+                    <td>Sexta-Feira</td>
+                    <td>6h às 21h</td>
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td>6h às 11h</td>
+                </tr>
+                <tr>
+                    <td>Domingo</td>
+                    <td>Fechado</td>
+                </tr>
+            </tbody>
+        </table> -->
+    </main>
+    <footer>
+        <p>© All rights reserved | Luiz Felipe Föeger Santos</p>
+    </footer>
+</body>
+
+</html>

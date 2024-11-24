@@ -56,7 +56,6 @@ p {
 }
 
 .card-servicos {
-    /* background-color: #020202ef; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -66,8 +65,7 @@ p {
     -moz-box-shadow: 0px 0px 45px -15px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 45px -15px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
-    transition: ease 0.3s;
-    /* color: #fff; */
+    transition: ease 0.2s;
 }
 
 .card-servicos:hover {
@@ -97,7 +95,7 @@ p {
     margin: 10px 0 20px;
     font-family: 'Parkinsans', sans-serif;
     font-size: 14px;
-    padding: 0 10px;
+    padding: 0 17px;
 }
 
 .card-servicos h3 {
