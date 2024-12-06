@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style-header.css">
     <link rel="stylesheet" href="/style/style-contato.css">
-    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
-    <title>Academia Equilibrio - Início</title>
+    <link rel="shortcut icon" href="/img/icon/icon.png" type="image/x-icon" style="width: 100%" />
+    <title>Academia Equilibrio - Contato</title>
 </head>
 
 <body>
     <header class="cabecalho">
         <div>
-            <a href="index.html"><img src="./img/logo.png" alt="Logo Academia Equilibrio"></a>
+            <a href="index.html"><img src="./img/icon/logo.png" alt="Logo Academia Equilibrio"></a>
         </div>
         <nav class="itensHeader">
             <ul>
@@ -30,125 +30,91 @@
         </nav>
     </header>
     <main>
-        <form action="">
-            <!-- <h1>Personalizamos seu treino com base nas suas informações</h1> -->
-            <section class="informacoes">
-                <label for="nomeSobrenome">Nome:</label>
-                <input type="text" id="nomeSobrenome" placeholder="Nome completo" required>
+        <section class="section-contato">
+            <!--  <div>
+                <img src="/img/contato.png" alt="">
+            </div> -->
+            <form action="">
+                <h1>Personalizamos seu treino com base <br> nas suas informações</h1>
+                <section class="informacoes">
+                    <label for="nomeSobrenome">Nome:</label>
+                    <input type="text" id="nomeSobrenome" placeholder="Nome completo" required>
 
-                <section>
-                    <div>
-                        <label for="nomeSobrenome">Idade:</label>
-                        <input type="number" id="idade" placeholder="Sua idade" required>
-                    </div>
+                    <section>
+                        <div>
+                            <label for="nomeSobrenome">Idade:</label>
+                            <input type="number" id="idade" placeholder="Sua idade" required>
+                        </div>
 
-                    <div>
-                        <label for="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" placeholder="+55 (11) 99999-8888" required>
-                    </div>
+                        <div>
+                            <label for="telefone">Telefone:</label>
+                            <input type="tel" id="telefone" placeholder="+55 (11) 99999-8888" required>
+                        </div>
+                    </section>
+
+                    <label for="email">Seu melhor E-mail:</label>
+                    <input type="email" id="email" placeholder="email@dominio.com" required>
+
+                    <section>
+                        <div>
+                            <label for="nomeSobrenome">Altura:</label>
+                            <input type="number" id="nomeSobrenome" placeholder="Ex: 1,75" required>
+                        </div>
+                        <div>
+                            <label for="nomeSobrenome">Peso:</label>
+                            <input type="text" id="nomeSobrenome" placeholder="Peso em Kg" required>
+                        </div>
+                    </section>
+
+                    <label for="mensagem">Mensagem: <p>(opcional)</p></label>
+                    <textarea id="mensagem" cols="30" rows="10"></textarea>
                 </section>
 
-                <label for="email">Seu melhor E-mail:</label>
-                <input type="email" id="email" placeholder="email@dominio.com" required>
-
-                <section>
-                    <div>
-                        <label for="nomeSobrenome">Altura:</label>
-                        <input type="number" id="nomeSobrenome" placeholder="Ex: 1,75" required>
-                    </div>
-                    <div>
-                        <label for="nomeSobrenome">Peso:</label>
-                        <input type="text" id="nomeSobrenome" placeholder="Peso em Kg" required>
-                    </div>
-                </section>
-
-                <label for="mensagem">Mensagem: <p>(opcional)</p></label>
-                <textarea id="mensagem" cols="30" rows="10"></textarea>
-            </section>
-
-            <fieldset>
-                <legend>Qual horário prefere ser atendido?</legend>
-                <ul class="list">
-                    <li class="list__item">
-                        <label class="label--radio">
-                            <input type="radio" class="radio" checked name="foo">
-                            Manhã
-                        </label>
-                    </li>
-                    <li class="list__item">
-                        <label class="label--radio">
-                            <input type="radio" class="radio" name="foo">
-                            Tarde
-                        </label>
-                    </li>
-                    <li class="list__item">
-                        <label class="label--radio">
-                            <input type="radio" class="radio" name="foo">
-                            Noite
-                        </label>
-                    </li>
-                </ul>
-            </fieldset>
-
-            <div>
-                <fieldset class="preferencia-contato">
-                    <legend>Como prefere nosso contato?</legend>
-                    <select id="caixaSelecionar">
-                        <option value="selecionar" selected disabled>Selecionar</option>
-                        <option value="manha">WhatsApp</option>
-                        <option value="tarde">E-mail</option>
-                        <option value="noite">Telefone</option>
-                    </select>
+                <fieldset>
+                    <legend>Qual horário prefere ser atendido?</legend>
+                    <ul class="list">
+                        <li class="list__item">
+                            <label class="label--radio">
+                                <input type="radio" class="radio" checked name="foo">
+                                Manhã
+                            </label>
+                        </li>
+                        <li class="list__item">
+                            <label class="label--radio">
+                                <input type="radio" class="radio" name="foo">
+                                Tarde
+                            </label>
+                        </li>
+                        <li class="list__item">
+                            <label class="label--radio">
+                                <input type="radio" class="radio" name="foo">
+                                Noite
+                            </label>
+                        </li>
+                    </ul>
                 </fieldset>
 
-            </div>
-            <div class="checkbox">
+                <div>
+                    <fieldset class="preferencia-contato">
+                        <legend>Como prefere nosso contato?</legend>
+                        <select id="caixaSelecionar">
+                            <option value="selecionar" selected disabled>Selecionar</option>
+                            <option value="manha">WhatsApp</option>
+                            <option value="tarde">E-mail</option>
+                            <option value="noite">Telefone</option>
+                        </select>
+                    </fieldset>
 
-                <input id="checkbox-novidades" type="checkbox" checked>
-                <label for="checkbox-novidades">Gostaria de receber nossas novidades por E-mail?</label>
-            </div>
-            <input class="button" type="submit" value="concluir">
+                </div>
+                <div class="checkbox">
 
-        </form>
-        <!-- <table>
-            <thead>
-                <tr>
-                    <th colspan="2">Horários de Funcionamento:</th>
-                </tr>
-                <th>Dia</th>
-                <th>Horário</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Segunda-Feira</td>
-                    <td>6h às 21h</td>
-                </tr>
-                <tr>
-                    <td>Terça-Feira</td>
-                    <td>6h às 21h</td>
-                </tr>
-                <tr>
-                    <td>Quarta-Feira</td>
-                    <td>6h às 21h</td>
-                </tr>
-                <tr>
-                    <td>Quinta-Feira</td>
-                    <td>6h às 21h</td>
-                </tr>
-                <tr>
-                    <td>Sexta-Feira</td>
-                    <td>6h às 21h</td>
-                </tr>
-                <tr>
-                    <td>Sábado</td>
-                    <td>6h às 11h</td>
-                </tr>
-                <tr>
-                    <td>Domingo</td>
-                    <td>Fechado</td>
-                </tr>
-            </tbody>
-        </table> -->
+                    <input id="checkbox-novidades" type="checkbox" checked>
+                    <label for="checkbox-novidades">Gostaria de receber nossas novidades por E-mail?</label>
+                </div>
+                <input class="button" type="submit" value="concluir">
+
+            </form>
+        </section>
     </main>
     <footer>
         <p>© All rights reserved | Luiz Felipe Föeger Santos</p>

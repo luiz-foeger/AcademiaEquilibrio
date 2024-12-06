@@ -118,7 +118,7 @@ p {
 }
 
 .section-servicos strong {
-    font-size:50px;
+    font-size: 50px;
     color: #000;
     font-family: 'Bebas Neue', sans-serif;
     margin-right: 2px;
@@ -165,6 +165,28 @@ h5 {
     margin: -2px 0 20px;
     font-weight: 600;
 }
+
+/* ---------------------- // ---------------------- */
+
+/* .section-horarios table {
+    font-family: 'Parkinsans', sans-serif;
+    margin: 40px auto;
+}
+
+.section-horarios thead {
+    background-color: #999999;
+    color: white;
+    font: bold;
+}
+
+.section-horarios td,
+th {
+    width: 300px;
+    border: 1px solid #999999;
+    padding: 3px;
+    font-size: 20px;
+    text-align: center;
+} */
 
 @media screen and (max-width: 1500px) {
     h2 {

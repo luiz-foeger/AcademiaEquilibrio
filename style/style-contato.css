@@ -8,6 +8,38 @@ main {
 
 /* ---------------------- // ---------------------- */
 
+/* .section-contato {
+    background-color: #fff;
+    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 65px;
+}
+
+.section-contato div {
+    margin-right: 15px;
+    width: 570px;
+}
+
+.section-contato img {
+    height: 80%;
+    width: 570px;
+    top: 0;
+    filter: opacity(0.8);
+    position: fixed;
+} */
+
+/* ---------------------- // ---------------------- */
+
+h1 {
+    font-size: 2.1rem;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    margin: 40px 20px;
+    width: 470px;
+}
+
 .informacoes label {
     font-size: 30px;
     font-family: 'Bebas Neue', sans-serif;
@@ -48,7 +80,7 @@ form {
 }
 
 fieldset {
-    width: 470px;
+    width: 100%;
     border: solid 1px #ccc;
     border-radius: 5px;
     padding: 8px 10px;
@@ -83,12 +115,12 @@ textarea {
 
 .preferencia-contato {
     margin: 20px 0;
-    width: 470px;
     font-family: 'Parkinsans', sans-serif;
     font-size: 15px;
     border: solid 1px #ccc;
     border-radius: 5px;
     padding: 8px 10px;
+    /* width: 470px; */
 }
 
 .preferencia-contato select {
@@ -116,7 +148,7 @@ textarea {
     font-family: 'Bebas Neue', sans-serif;
     width: 471px;
     height: 70px;
-    width: 470px;
+    width: 100%;
     border: none;
     border-radius: 5px;
     background-color: #000000ec;
@@ -128,7 +160,7 @@ textarea {
 .button:hover {
     cursor: pointer;
     background-color: #000;
-    scale: 1.03;
+    scale: 1.01;
 }
 
 .button:active {
