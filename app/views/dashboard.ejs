@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Bem-vindo, <%= user.nome %></h1>
+    <form action="/schedule/agendar" method="POST">
+        <label>Escolha a aula:</label>
+        <select name="aula_id">
+            <option value="1">Musculação</option>
+            <option value="2">Yoga</option>
+            <option value="3">Pilates</option>
+        </select>
+        <input type="date" name="data" required>
+        <button type="submit">Agendar</button>
+    </form>
+    <a href="/auth/logout">Sair</a>
+</body>
+</html>
