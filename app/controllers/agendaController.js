@@ -1,4 +1,4 @@
-const Schedule = require('../models/schedule');
+const Agenda = require('../models/agenda');
 
 exports.showDashboard = (req, res) => {
     if (!req.session.user) {
@@ -7,13 +7,13 @@ exports.showDashboard = (req, res) => {
     res.render('dashboard', { user: req.session.user });
 };
 
-exports.schedule = (req, res) => {
+exports.agenda = (req, res) => {
     if (!req.session.user) {
         return res.redirect('/auth/login');
     }
     
     const { aula_id, data } = req.body;
-    Schedule.create(req.session.user.id, aula_id, data, (err) => {
+    Agenda.create(req.session.user.id, aula_id, data, (err) => {
         if (err) throw err;
         res.redirect('/dashboard');
     });
