@@ -1,12 +1,569 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Academia</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/icon/icon.png" type="image/x-icon" style="width: 100%" />
+  <title>Academia Equilibrio - Página Inicial</title>
 </head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&&family=Inter&family=Parkinsans:wght@300..800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Mea+Culpa&family=Inter:wght@100..900&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 600px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    /* background-color: #040510f2; */
+  }
+
+  /* ---------------------- // ---------------------- */
+
+  .cabecalho {
+    background-color: #020202;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.078);
+    height: 90px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+  }
+
+  .cabecalho img {
+    display: flex;
+    width: 60px;
+    filter: invert(100%);
+    /* margin: 165px; */
+  }
+
+  .itensHeader {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .itensHeader ul li {
+    font-size: 17px;
+    display: inline;
+    margin-right: 50px;
+  }
+
+  .itensHeader ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .itensHeader ul li a:hover {
+    text-decoration: none;
+    color: #fdb817;
+  }
+
+  /* ---------------------- // ---------------------- */
+
+  footer {
+    background-color: #020202;
+    height: 130px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  footer p {
+    font-family: Inter, sans serif;
+  }
+
+  /* ---------------------- // ---------------------- */
+
+  @media screen and (max-width: 1500px) {
+    .cabecalho {
+      height: 80px;
+    }
+  }
+
+  @media screen and (max-width: 670px) {
+    .cabecalho {
+      height: 50px;
+      width: 100%;
+    }
+
+    .cabecalho img {
+      width: 125px;
+    }
+
+    .itensHeader ul li {
+      font-size: 14px;
+      margin: 0px 9px;
+    }
+
+    footer {
+      height: 80px;
+      font-size: 10px;
+    }
+  }
+
+  #banner {
+    width: 100%;
+    object-fit: cover;
+    background-color: #fff;
+  }
+
+  h2 {
+    font-size: 60px;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 20px 0 30px;
+    font-family: 'Parkinsans', sans-serif;
+  }
+
+  /* ---------------------- // ---------------------- */
+
+  .section-info {
+    background-color: #fff;
+    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 65px;
+  }
+
+  .section-info img {
+    width: 690px;
+    height: 570px;
+    margin: 0;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+
+  .section-info div {
+    margin-left: 15px;
+    width: 690px;
+  }
+
+  .section-info p {
+    color: #010114A3;
+  }
+
+  .section-info strong {
+    color: #fdb817;
+  }
+
+  /* ---------------------- // ---------------------- */
+
+  .section-servicos {
+    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 45px;
+    height: 550px;
+  }
+
+  .card-servicos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 45px -15px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 45px -15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 45px -15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    transition: ease 0.2s;
+  }
+
+  .card-servicos:hover {
+    scale: 1.01;
+  }
+
+  .card-servicos:hover img {
+    filter: grayscale(0%);
+  }
+
+  /* .card-servicos:hover h3 {
+    display: flex;
+} */
+
+  .card-servicos img {
+    width: 440px;
+    height: 210px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    border-radius: 20px 20px 0 0;
+    position: relative;
+  }
+
+  .card-servicos p {
+    max-width: 435px;
+    color: #010114A3;
+    margin: 10px 0 20px;
+    font-family: 'Parkinsans', sans-serif;
+    font-size: 16px;
+    padding: 0 17px;
+  }
+
+  .card-servicos h3 {
+    /* display: none; */
+    display: flex;
+    font-size: 45px;
+    color: #fff;
+    width: 440px;
+    height: 210px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -175px;
+    border-radius: 20px 20px 0 0;
+    background-color: #000000a0;
+    font-family: 'Bebas Neue', sans-serif;
+    position: absolute;
+  }
+
+  .section-servicos strong {
+    font-size: 50px;
+    color: #000;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-right: 2px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* ---------------------- // ---------------------- */
+
+  .section-local {
+    background-color: #020202;
+    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 65px;
+    color: #fff;
+  }
+
+  .section-local div {
+    margin-right: 15px;
+    width: 690px;
+  }
+
+  .section-local img {
+    width: 690px;
+    height: 570px;
+    margin: 0;
+    object-fit: cover;
+    margin-left: 15px;
+  }
+
+  .section-local iframe {
+    width: 690px;
+    height: 350px;
+  }
+
+  h5 {
+    color: #fdb817;
+    font-size: 21px;
+    font-family: 'Parkinsans', sans-serif;
+    margin: -2px 0 20px;
+    font-weight: 600;
+  }
+
+  /* ---------------------- // ---------------------- */
+
+  @media screen and (max-width: 1500px) {
+    h2 {
+      font-size: 50px;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    p {
+      font-size: 15px;
+      margin: 10px 0 20px;
+      font-family: 'Parkinsans', sans-serif;
+    }
+
+    /* ---------------------- // ---------------------- */
+
+    .section-info {
+      background-color: #fff;
+      padding: 8px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 65px;
+    }
+
+    .section-info img {
+      width: 570px;
+      height: 450px;
+      margin: 0;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+
+    .section-info div {
+      margin-left: 15px;
+      width: 570px;
+    }
+
+    .section-info p {
+      color: #010114A3;
+    }
+
+    .section-info strong {
+      color: #fdb817;
+    }
+
+    /* ---------------------- // ---------------------- */
+
+    .section-servicos {
+      padding: 8px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 45px;
+      height: 550px;
+    }
+
+    .card-servicos {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      -webkit-box-shadow: 0px 0px 45px -15px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 0px 45px -15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 0px 45px -15px rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      transition: ease 0.2s;
+    }
+
+    .card-servicos:hover {
+      scale: 1.01;
+    }
+
+    .card-servicos:hover img {
+      filter: grayscale(0%);
+    }
+
+    .card-servicos img {
+      width: 350px;
+      height: 180px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      border-radius: 20px 20px 0 0;
+      position: relative;
+    }
+
+    .card-servicos p {
+      max-width: 350px;
+      color: #010114A3;
+      margin: 10px 0 20px;
+      font-family: 'Parkinsans', sans-serif;
+      font-size: 14px;
+      padding: 0 17px;
+    }
+
+    .card-servicos h3 {
+      /* display: none; */
+      display: flex;
+      font-size: 40px;
+      color: #fff;
+      width: 350px;
+      height: 180px;
+      align-items: center;
+      justify-content: center;
+      margin-top: -152px;
+      border-radius: 20px 20px 0 0;
+      background-color: #000000a0;
+      font-family: 'Bebas Neue', sans-serif;
+      position: absolute;
+    }
+
+    .section-servicos strong {
+      font-size: 40px;
+      color: #000;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ---------------------- // ---------------------- */
+
+    .section-local {
+      background-color: #020202;
+      padding: 8px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 45px;
+      height: 550px;
+      color: #fff;
+    }
+
+    .section-local div {
+      margin-right: 15px;
+      width: 570px;
+    }
+
+    .section-local img {
+      margin-left: 15px;
+      width: 570px;
+      height: 450px;
+      margin: 0;
+      object-fit: cover;
+    }
+
+    .section-local iframe {
+      width: 560px;
+      height: 260px;
+    }
+
+    h5 {
+      color: #fdb817;
+      font-size: 18px;
+      font-family: 'Parkinsans', sans-serif;
+      margin: -2px 0 20px;
+      font-weight: 600;
+    }
+  }
+</style>
+
 <body>
-    <h1>Bem-vindo à Academia</h1>
-    <a href="/auth/login">Entrar</a>
+  <header class="cabecalho">
+    <div>
+      <a href="index.html"><img src="img/icon/" alt="Logo Academia Equilibrio"></a>
+    </div>
+    <nav class="itensHeader">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#section-servicos">Serviços</a>
+        </li>
+        <li>
+          <a href="contato.html">Contato</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <img id="banner" src="img/banner.png" alt="Banner Smart Fit">
+    <section class="section-info section">
+      <img src="../public/img/interior-1.png" alt="Imagem interior da academia">
+      <div>
+        <h2>Por que se Matricular?</h2>
+        <p>Com uma equipe de profissionais qualificados e equipamentos de última geração, a
+          Academia Equilíbrio tem como missão proporcionar aos seus alunos melhor desempenho e qualidade de
+          vida, proporcionando uma vida mais saudável e feliz!</p>
+        <p><strong>EXCELÊNCIA:</strong> Aqui seu treino possui padrão de excelência e disponibilidade,
+          garantindo rápida evolução dos nossos alunos.</p>
+        <p><strong>BEM ESTAR:</strong> Com profissionais dedicados e uma atmosfera descontraída, ajudamos você a
+          alcançar suas metas com prazer e entusiasmo.</p>
+        <p><strong>FLEXIBILIDADE:</strong> Oferecemos horários flexíveis e uma grade diversificada de aulas,
+          permitindo que você adapte seus treinos do seu jeito.</p>
+      </div>
+    </section>
+    <section class="section-local">
+      <div>
+        <h2>ONDE NOS ENCONTRAR?</h2>
+        <h5>Venha conhecer nosso espaço!</h5>
+        <p>R. Cel. José Rufino Freire, 247 - Vila Maria Eugenia, São Paulo - SP</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3397.4617293191072!2d-46.755534673245435!3d-23.490469222043757!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefeb69b08ada3%3A0xb31caabe3b2538c5!2sEquilibrio%20Academia!5e0!3m2!1spt-PT!2sbr!4v1732383932555!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <img src="img/interior-3.png" alt="">
+    </section>
+    <!-- <h3>Serviços</h3> -->
+    <section id="section-servicos" class="section-servicos section">
+      <a href="contato.html">
+        <div class="card-servicos">
+          <img src="./img/servicos/musculacao2.png" alt="Imagem de musculação">
+          <h3>MUSCULAÇÃO</h3>
+          <p>Todos os dias da semana com instrutor e equipamentos de última geração.</p>
+          <p><strong>R$ 80,00</strong>/mês</p>
+        </div>
+      </a>
+      <a href="contato.html">
+        <div class="card-servicos">
+          <img src="./img/servicos/personal.png" alt="Imagem de personal trainer">
+          <h3>PERSONAL TRAINER</h3>
+          <p>Aulas particulares três vezes por semana com instrutores qualificados.</p>
+          <p><strong>R$ 120,00</strong>/mês</p>
+        </div>
+      </a>
+      <a href="contato.html">
+        <div class="card-servicos">
+          <img src="./img/servicos/crossfit.png" alt="Imagem de crossfit">
+          <h3>CROSSFIT</h3>
+          <p>Três vezes por semana com horários flexíveis e turmas de até 8 alunos.</p>
+          <p><strong>R$ 140,00</strong>/mês</p>
+        </div>
+      </a>
+    </section>
+    <!-- <section class="section-horarios">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Horários de Funcionamento:</th>
+                    </tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Segunda-Feira</td>
+                        <td>6h às 21h</td>
+                    </tr>
+                    <tr>
+                        <td>Terça-Feira</td>
+                        <td>6h às 21h</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta-Feira</td>
+                        <td>6h às 21h</td>
+                    </tr>
+                    <tr>
+                        <td>Quinta-Feira</td>
+                        <td>6h às 21h</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta-Feira</td>
+                        <td>6h às 21h</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>6h às 11h</td>
+                    </tr>
+                    <tr>
+                        <td>Domingo</td>
+                        <td>Fechado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section> -->
+  </main>
+  <footer>
+    <p>© All rights reserved | Luiz Felipe Föeger Santos</p>
+  </footer>
 </body>
+
 </html>
