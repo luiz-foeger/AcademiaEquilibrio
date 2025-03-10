@@ -9,13 +9,24 @@
     <%- include('../components/header') %>
     <h1>Bem-vindo, <%= aluno.nome.split('')[0].toUpperCase() %></h1>
     <form action="/agendar" method="POST">
-        <label>Escolha a aula:</label>
-        <select name="aula_id">
-            <option value="1">Musculação</option>
-            <option value="2">Yoga</option>
-            <option value="3">Pilates</option>
+        <label>Escolha a atividade:</label>
+        <select name="atividade" required>
+            <option value="Musculação">Musculação</option>
+            <option value="Yoga">Yoga</option>
+            <option value="Pilates">Pilates</option>
         </select>
-        <input type="date" name="data" required>
+        <input type="datetime" name="data_hora" required>
+        <select name="duracao" required>
+            <option value="30">30 minutos</option>
+            <option value="60">60 minutos</option>
+            <option value="90">90 minutos</option>
+        </select>
+        <select name="nome_instrutor" required>
+            <option value="João">João</option>
+            <option value="Maria">Maria</option>
+            <option value="Ana">Ana</option>
+        </select>
+
         <button type="submit">Agendar</button>
     </form>
     <a href="/auth/logout">Sair</a>
