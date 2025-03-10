@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Agendar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <title>Agendar</title>
 </head>
+
 <body>
-    <%- include('../components/header') %>
-    <form action="/auth/agendar" method="POST">
-        <label>Escolha a atividade:</label>
-        <select name="atividade" required>
+  <%- include('../components/header') %>
+  <form action="/auth/agendar" method="POST">
+    <div class="container-login">
+      <div class="card-login">
+
+        <fieldset>
+          <legend>Qual horário prefere ser atendido?</legend>
+          <select name="atividade" required>
             <option value="Musculação">Musculação</option>
             <option value="Yoga">Yoga</option>
             <option value="Pilates">Pilates</option>
-        </select>
+          </select>
+        </fieldset>
+
         <input type="datetime-local" name="data_hora" required>
         <select name="duracao" required>
-            <option value="30">30 minutos</option>
-            <option value="60">60 minutos</option>
-            <option value="90">90 minutos</option>
+          <option value="30">30 minutos</option>
+          <option value="60">60 minutos</option>
+          <option value="90">90 minutos</option>
         </select>
         <select name="nome_instrutor" required>
-            <option value="João">João</option>
-            <option value="Maria">Maria</option>
-            <option value="Ana">Ana</option>
+          <option value="João">João</option>
+          <option value="Maria">Maria</option>
+          <option value="Ana">Ana</option>
         </select>
 
         <button type="submit">Agendar</button>
-    </form>
-    <%- include('../components/footer') %>
-    
+      </div>
+    </div>
+  </form>
+  <%- include('../components/footer') %>
+
 </body>
+
 </html>

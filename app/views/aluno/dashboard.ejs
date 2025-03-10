@@ -2,24 +2,32 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title><%= aluno.nome.toUpperCase() %> - Dashboard</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
 </head>
 <body>
     <%- include('../components/header') %>
-    <h1>Bem-vindo, <%= aluno.nome.split('')[0].toUpperCase() %></h1>
+
+    <section class="dashboard">
+    <h2>Bem-vindo, <%= aluno.nome %>!</h2>
     
     <% if(agendamentos.length > 0){ %>
         <% for(var i = 0; i < agendamentos.length; i++){ %>
             <div>
-                <h1>Atividade: <%= agendamentos[i].atividade %></h1>
-                <h1>Data e Hora: <%= agendamentos[i].data_hora %></h1>
-                <h1>Duração<%= agendamentos[i].duracao %></h1></h1>
+                <h5>Voce possui um agendamento:</h5>
+                <p>Atividade: <%= agendamentos[i].atividade %></p>
+                <p>Data e Hora: <%= agendamentos[i].data_hora %></p>
+                <p>Duração: <%= agendamentos[i].duracao %> minutos</p></h1>
             </div>
             <% } %>
         <%}else{ %>
             <p>Você ainda não possui agendamentos.</p>
+            <a href="/agendar">Agendar agora</a>    
         <%}%>
+
+    </section>
+
     <%- include('../components/footer') %>
 </body>
 </html>

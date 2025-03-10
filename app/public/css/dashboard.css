@@ -1,0 +1,112 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.dashboard p {
+  font-size: 16px;
+}
+
+.dashboard a {
+  margin-top: 10px;
+  background-color: #000;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 20px 80px 20px 80px;
+  border: 0px;
+  border-radius: 40px;
+  font-family: "Parkinsans", sans-serif;
+}
+
+.dashboard a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.container-login {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  display: flex;
+}
+
+.card-login {
+  text-align: center;
+  padding: 80px 130px 130px 130px;
+  margin: 140px 0;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+fieldset {
+  width: 100%;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  padding: 8px 10px;
+  margin-bottom: 30px;
+}
+
+legend {
+  font-size: 30px;
+  font-family: "Bebas Neue", sans-serif;
+  padding: 0 5px;
+}
+
+select,
+input {
+  font-family: "Parkinsans", sans-serif;
+  font-size: 15px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  margin: 10px 8px 20px;
+  text-align: center;
+  height: 40px;
+  width: 200px;
+  /* width: 100%; */
+}
+
+option {
+  font-family: "Parkinsans", sans-serif;
+  font-size: 15px;
+  border-radius: 5px;
+  /* padding: 4px 10px; */
+  width: 150px;
+  text-align: center;
+}
+
+button {
+  font-family: "Bebas Neue", sans-serif;
+  width: 471px;
+  height: 70px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000ec;
+  color: #ffffff;
+  font-size: 30px;
+  transition: ease 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #000;
+  scale: 1.01;
+}
+
+button:active {
+  scale: 0.99;
+}
+
+h1 {
+  font-family: "parkinsans", sans-serif;
+  font-size: 30px;
+}
