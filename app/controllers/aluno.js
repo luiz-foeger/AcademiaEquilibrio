@@ -13,9 +13,11 @@ module.exports.dashboard = function (app, req, res) {
         });
     }
 };
+
 module.exports.login = function (app, req, res) {
     res.render('aluno/login', { errors: {} , flagAluno: req.session.aluno});
 };
+
 module.exports.authLogin = function (app, req, res) {
     //console.log(req.body);
     const dadosForm = req.body;
