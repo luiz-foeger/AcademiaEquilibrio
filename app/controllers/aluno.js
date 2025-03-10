@@ -7,7 +7,6 @@ module.exports.dashboard = function (app, req, res) {
         agendamentoDAO.getAlunoById(req.session.aluno, function (error, result) {
             agendamentoDAO.getAgendamentosByAlunoId(req.session.aluno, function (error, resultAgedamento) 
             {
-                console.log(resultAgedamento);
                 res.render('aluno/dashboard', { aluno: result[0], agendamentos: resultAgedamento, flagAluno: req.session.aluno });
             });
         });
@@ -42,6 +41,17 @@ module.exports.authLogin = function (app, req, res) {
         }
     });
 };
+module.exports.authAgendar = function (app, req, res) {
+    const dadosForm = req.body;
+   dadosForm.id_aluno = req.session.aluno;
+    console.log(dadosForm);
+    const connection = app.config.dbConnection();
+    const agendamentoDAO = new app.app.models.AgendamentoDAO(connection);
+    agendamentoDAO.insertAgendamento(dadosForm, function (error, result) {
+        res.redirect('/dashboard');
+    });
+
+}
 module.exports.authLogout = function (app, req, res) {
     req.session.destroy(function (error) {
         res.redirect('/');

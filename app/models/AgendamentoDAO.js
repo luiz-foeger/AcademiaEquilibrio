@@ -10,6 +10,9 @@ AgendamentoDAO.prototype.getAlunoById = function (idAluno, callback) {
 AgendamentoDAO.prototype.getAgendamentosByAlunoId = function (idAluno, callback) {
     this._connection.query('SELECT * FROM agendamentos WHERE id_aluno = ?', idAluno, callback);
 }
+AgendamentoDAO.prototype.insertAgendamento = function (agendamento, callback) {
+    this._connection.query('INSERT INTO agendamentos SET ?', agendamento, callback);
+}
 module.exports = function() {
     return AgendamentoDAO;
 }
