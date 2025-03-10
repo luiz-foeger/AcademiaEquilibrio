@@ -19,7 +19,7 @@
         <button type="submit">Agendar</button>
     </form>
     <a href="/auth/logout">Sair</a>
-    <% if(agendamentos.length>0){ %>
+    <% if(agendamentos.length > 0){ %>
         <% for(var i = 0; i < agendamentos.length; i++){ %>
             <div>
                 <h1>Atividade: <%= agendamentos[i].atividade %></h1>
