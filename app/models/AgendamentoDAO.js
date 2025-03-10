@@ -4,6 +4,9 @@ function AgendamentoDAO(connection) {
 AgendamentoDAO.prototype.getLogin = function (dadosForm, callback) {
     this._connection.query('SELECT * FROM alunos WHERE nome = ? AND senha = ?', [dadosForm.nome, dadosForm.senha], callback);
 }
+AgendamentoDAO.prototype.getAgendamentos = function (idAluno, callback) {
+    this._connection.query('SELECT * FROM agendamentos WHERE id_aluno = ?', idAluno, callback);
+}
 module.exports = function() {
     return AgendamentoDAO;
 }

@@ -15,7 +15,7 @@ module.exports.authLogin = function (app, req, res) {
     const connection = app.config.dbConnection();
     const agendamentoDAO = new app.app.models.AgendamentoDAO(connection);
     agendamentoDAO.getLogin(dadosForm, function (error, result) {
-        console.log(result);
+        //console.log(result);
         if (result.length > 0) {
            // console.log('Login efetuado com sucesso');
             req.session.aluno = result[0].id;
