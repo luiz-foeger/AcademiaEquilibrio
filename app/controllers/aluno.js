@@ -15,7 +15,8 @@ module.exports.dashboard = function (app, req, res) {
 };
 
 module.exports.login = function (app, req, res) {
-    res.render('aluno/login', { errors: {} , flagAluno: req.session.aluno});
+    console.log(req.session.erro);
+    res.render('aluno/login', { errors: req.session.erro , flagAluno: req.session.aluno});
 };
 
 module.exports.authLogin = function (app, req, res) {
@@ -35,7 +36,8 @@ module.exports.authLogin = function (app, req, res) {
             res.redirect('/dashboard');
         } else {
             //console.log('Login ou senha incorretos');
-            res.render('aluno/login', { errors: [{msg: 'Nome ou senha incorretos'}], flagAluno: req.session.aluno });
+            req.session.erro= [{msg: 'Login ou senha incorretos'}];
+            res.redirect('/login');
             
         }
     });

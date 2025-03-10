@@ -11,7 +11,7 @@
 
 <body>
   <%- include("../components/header") %>
-  <% if (errors.length>0) { %>
+  <% if (errors !== undefined ) { %>
   <p style="color: red;"><%= errors[0].msg %></p>
   <% } %>
   <form action="/auth/login" method="POST">
