@@ -12,24 +12,8 @@
 
 
 <body>
-  <header class="cabecalho">
-    <div>
-      <a href="index.html"><img src="./img/icon/icon.png" alt="Logo Academia Equilibrio"></a>
-    </div>
-    <nav class="itensHeader">
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#section-servicos">Serviços</a>
-        </li>
-        <li>
-          <a href="/login">Agendar</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <%- include("../components/header") %>
+ 
   <main>
     <img id="banner" src="./img/banner-2.png" alt="Banner Smart Fit">
     <section class="section-info section">
@@ -58,7 +42,7 @@
     </section>
     <!-- <h3>Serviços</h3> -->
     <section id="section-servicos" class="section-servicos section">
-      <a href="contato.html">
+      <a href="/login">
         <div class="card-servicos">
           <img src="./img/servicos/musculacao2.png" alt="Imagem de musculação">
           <h3>MUSCULAÇÃO</h3>
@@ -66,7 +50,7 @@
           <p><strong>R$ 80,00</strong>/mês</p>
         </div>
       </a>
-      <a href="contato.html">
+      <a href="/login">
         <div class="card-servicos">
           <img src="./img/servicos/personal.png" alt="Imagem de personal trainer">
           <h3>PERSONAL TRAINER</h3>
@@ -74,7 +58,7 @@
           <p><strong>R$ 120,00</strong>/mês</p>
         </div>
       </a>
-      <a href="contato.html">
+      <a href="/login">
         <div class="card-servicos">
           <img src="./img/servicos/crossfit.png" alt="Imagem de crossfit">
           <h3>CROSSFIT</h3>
