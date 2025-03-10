@@ -5,7 +5,7 @@ const connMYSQL = function(){
         host :'localhost',
         user : 'root',
         password : '',
-        database : 'academiaEquilibrio'
+        database : 'academiaequilibrio'
     })
 }
 module.exports = function(){
