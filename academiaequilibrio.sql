@@ -10,7 +10,7 @@ CREATE TABLE alunos (
 );
 
 -- Criar a tabela de agendamento
-CREATE TABLE agendamento (
+CREATE TABLE agendamentos (
     id INT PRIMARY KEY AUTO_INCREMENT,
     id_aluno INT NOT NULL,
     atividade VARCHAR(50) NOT NULL,

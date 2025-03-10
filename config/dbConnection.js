@@ -8,6 +8,7 @@ const connMYSQL = function(){
         database : 'academiaequilibrio'
     })
 }
+
 module.exports = function(){
     return connMYSQL;
 }
