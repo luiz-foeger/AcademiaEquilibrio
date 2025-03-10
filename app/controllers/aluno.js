@@ -12,7 +12,9 @@ module.exports.dashboard = function (app, req, res) {
         });
     }
 };
-
+module.exports.agendar = function (app, req, res) {
+    res.render('aluno/agendar', { flagAluno: req.session.aluno });
+}
 module.exports.login = function (app, req, res) {
     console.log(req.session.erro);
     res.render('aluno/login', { errors: req.session.erro , flagAluno: req.session.aluno});
