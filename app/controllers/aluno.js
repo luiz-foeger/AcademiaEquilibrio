@@ -5,7 +5,7 @@ module.exports.login = function (app, req, res) {
     res.render('aluno/login', { errors: {} , flagAluno: req.session.aluno});
 };
 module.exports.authLogin = function (app, req, res) {
-    console.log(req.body);
+    //console.log(req.body);
     const dadosForm = req.body;
     req.assert('nome', 'Nome não pode ser vazio').notEmpty();
     req.assert('senha', 'Senha não pode ser vazia').notEmpty();
@@ -17,12 +17,13 @@ module.exports.authLogin = function (app, req, res) {
     agendamentoDAO.getLogin(dadosForm, function (error, result) {
         console.log(result);
         if (result.length > 0) {
-            console.log('Login efetuado com sucesso');
+           // console.log('Login efetuado com sucesso');
             req.session.aluno = result[0].id;
             res.redirect('/dashboard');
         } else {
+            
             //console.log('Login ou senha incorretos');
-            res.render('aluno/login', { errors: {msg: 'Nome ou senha incorretos'}, flagAluno: req.session.aluno });
+            res.render('aluno/login', { errors: [{msg: 'Nome ou senha incorretos'}], flagAluno: req.session.aluno });
             
         }
     });
