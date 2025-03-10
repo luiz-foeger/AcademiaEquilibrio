@@ -13,6 +13,12 @@ AgendamentoDAO.prototype.getAgendamentosByAlunoId = function (idAluno, callback)
 AgendamentoDAO.prototype.insertAgendamento = function (agendamento, callback) {
     this._connection.query('INSERT INTO agendamentos SET ?', agendamento, callback);
 }
+AgendamentoDAO.prototype.deleteAgendamento = function (idAgendamento, callback) {
+    this._connection.query('DELETE FROM agendamentos WHERE id = ?', idAgendamento, callback);
+}
+AgendamentoDAO.prototype.editAgendamento = function (agendamento, callback) {
+    this._connection.query('UPDATE agendamentos SET ? WHERE id = ?', [agendamento, agendamento.id], callback);
+}
 module.exports = function() {
     return AgendamentoDAO;
 }
