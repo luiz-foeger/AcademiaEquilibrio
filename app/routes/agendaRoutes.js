@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const agendaController = require('../controllers/agendaController');
+const agendaController = require('./controllers/agendaController');
 
 router.get('/dashboard', agendaController.showDashboard);
 router.post('/agendar', agendaController.agenda);
