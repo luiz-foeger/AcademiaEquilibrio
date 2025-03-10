@@ -1,4 +1,3 @@
-const Agenda = require('../models/agenda');
 
 exports.showDashboard = (req, res) => {
     if (!req.session.user) {
