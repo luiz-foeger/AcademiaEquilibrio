@@ -4,6 +4,7 @@
     </div>
     <nav class="itensHeader">
       <ul>
+        <% if(flagAluno == undefined){ %>
         <li>
           <a href="/login">Agendar</a>
         </li>
@@ -13,6 +14,17 @@
         <li>
           <a href="/login">Entrar</a>
         </li>
+        <% } else { %>
+        <li>
+          <a href="/dashboard">Dashboard</a>
+        </li>
+        <li>
+          <a href="/agendar">Agendar</a>
+        </li>
+        <li>
+          <a href="/auth/logout">Sair</a>
+        </li>
+        <% } %>
       </ul>
     </nav>
   </header>
