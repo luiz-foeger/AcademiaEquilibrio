@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/style.css">
+
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+    <%- include("../components/header") %>
     <h1>Login</h1>
     <% if (errors.length>0) { %>
         <p style="color: red;"><%= errors[0].msg %></p>
     <% } %>
-    <form action="/auth" method="POST">
+    <form action="/auth/login" method="POST">
         <input type="text" name="nome" placeholder="Nome" required>
         <input type="password" name="senha" placeholder="Senha" required>
         <button type="submit">Entrar</button>
     </form>
+    <%- include("../components/footer") %>
 </body>
 </html>

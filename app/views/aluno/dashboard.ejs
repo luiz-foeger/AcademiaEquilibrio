@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Bem-vindo, <%= user.nome %></h1>
+    <%- include('../components/header') %>
+    <h1>Bem-vindo, <%= aluno.nome.split('')[0].toUpperCase() %></h1>
     <form action="/agendar" method="POST">
         <label>Escolha a aula:</label>
         <select name="aula_id">
@@ -18,5 +19,6 @@
         <button type="submit">Agendar</button>
     </form>
     <a href="/auth/logout">Sair</a>
+    <%- include('../components/footer') %>
 </body>
 </html>
