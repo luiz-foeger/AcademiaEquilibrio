@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon/icon.png" type="image/x-icon" style="width: 100%" />
     <link rel="stylesheet" href="/css/style.css">
-    <title>Remarcar</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <title>Remarcar Horário - Academia Equilibrio</title>
 </head>
 <body>
     <%- include('../components/header') %>
@@ -12,7 +14,7 @@
         <div class="container-login">
             <div class="card-login">
                 <fieldset>
-                    <legend>Qual horário prefere ser atendido?</legend>
+                    <legend>Atividade escolhida</legend>
                     <select name="atividade" required disabled>
                         <% switch (agendamento.atividade) {
                             case 'Musculação':
@@ -40,16 +42,16 @@
                     <option value="90">90 minutos</option>
                 </select>
                 <fieldset>
-                    <legend>Instrutor</legend>
+                    <legend>Seu instrutor</legend>
                     <select name="nome_instrutor" required disabled>
                         <% switch (agendamento.nome_instrutor) {
                             case 'João':
                                 %>
                                 <option value="João" selected>João</option>
                                 <% break;
-                            case 'Maria':
+                            case 'Ádrian':
                                 %>
-                                <option value="Maria" selected>Maria</option>
+                                <option value="Ádrian" selected>Ádrian</option>
                                 <% break;
                         
                             default:
@@ -62,11 +64,12 @@
                 </fieldset>
                 <input type="hidden" name="id" value="<%= agendamento.id %>">
                 <input type="hidden" name="id_aluno" value="<%= agendamento.id_aluno %>">
-                <input type="submit" value="Remarcar">
+                <button>Remarcar</button>
             </div>
         </div>
     </form>
     <%- include('../components/footer') %>
+    // <input type="submit" value="Remarcar">
     
 </body>
 </html>

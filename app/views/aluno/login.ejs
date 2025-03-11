@@ -3,26 +3,27 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/icon/icon.png" type="image/x-icon" style="width: 100%" />
+  <title>Fazer Login - Academia Equilibrio</title>
   <link href="css/style.css" rel="stylesheet">
   <link href="css/login.css" rel="stylesheet">
 </head>
 
 <body>
   <%- include("../components/header") %>
-  <% if (errors !== undefined ) { %>
-  <p style="color: red;"><%= errors[0].msg %></p>
-  <% } %>
   <form action="/auth/login" method="POST">
     <div class="container-login">
       <div class="card-login">
         <h2>Login</h2>
+        <% if (errors !== undefined ) { %>
+        <p style="color: red;"><%= errors[0].msg %></p>
+        <% } %>
         <div>
-          <input type="text" name="nome" placeholder="Nome" required>
+          <input type="text" name="nome" placeholder="Nome de usuário" required>
         </div>
         <div>
-          <input type="password" name="senha" placeholder="Senha" required>
+          <input type="password" name="senha" placeholder="Sua senha" required>
         </div>
         <button type="submit">Entrar</button>
       </div>

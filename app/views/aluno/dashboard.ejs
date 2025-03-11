@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon/icon.png" type="image/x-icon" style="width: 100%" />
     <title>
-        <%= aluno.nome.toUpperCase() %> - Dashboard
+        <%= aluno.nome.toUpperCase() %> - Dashboard de aulas
     </title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
@@ -25,14 +27,16 @@
                             <p>Data e Hora: <%= agendamentos[i].data_hora %></p>
                             <p>Duração: <%= agendamentos[i].duracao %> minutos</p></h1>
                             <section>
-                                <a href="/auth/deletar?id=<%= agendamentos[i].id %>">Cancelar agendamento</a>
+                                <a href="/auth/deletar?id=<%= agendamentos[i].id %>">Cancelar</a>
                                 <a href="/dashboard/remarcar?id=<%= agendamentos[i].id %>">Remarcar</a>
                             </section>
                         </div>
                         <% } %>
                     <%}else{ %>
-                        <p>Você ainda não possui agendamentos.</p>
-                        <a href="/agendar">Agendar agora</a>    
+                        <div class="sem-agendamentos">
+                            <p>Você ainda não possui agendamentos.</p>
+                            <a href="/agendar">Agendar agora</a>    
+                        </div>
                     <%}%>
             </section>
 

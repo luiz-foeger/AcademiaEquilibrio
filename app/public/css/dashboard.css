@@ -23,7 +23,8 @@
   flex-wrap:wrap;
   width: 100%;
 }
-.agendamentos div{
+
+.agendamentos div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,11 +32,16 @@
   text-align: center;
   box-sizing: border-box;
   margin: 10px;
-  padding: 10px;
-  border: 1px solid #000;
+  padding: 33px 10px 10px 10px;
+  /* border: 1px solid #000; */
   border-radius: 10px;
   width: 40%;
+  -webkit-box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.070);
+  -moz-box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.070);
+  box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.070);
+  border-radius: 20px;
 }
+
 .agendamentos div section{
   max-width: 100%;
   height: 100%;
@@ -47,10 +53,16 @@
   flex-wrap: wrap;
   padding: 1em;
 }
+
 .agendamentos div section a{
   width: 100%;
   height: 30%;
 }
+
+.dashboard p {
+  margin-bottom: 7px;
+}
+
 .dashboard a {
   margin-top: 10px;
   background-color: #000;
@@ -61,14 +73,17 @@
   border: 0px;
   border-radius: 40px;
   font-family: "Parkinsans", sans-serif;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .dashboard a:hover {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
+  cursor: pointer;
+  background-color: #000;
+  scale: 1.01;
+}
 
+.dashboard a:active {
+  scale: 0.99;
 }
 
 .container-login {
@@ -81,7 +96,7 @@
 
 .card-login {
   text-align: center;
-  padding: 80px 130px 130px 130px;
+  padding: 80px 130px;
   margin: 140px 0;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.1);
