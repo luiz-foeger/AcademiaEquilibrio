@@ -16,9 +16,38 @@ module.exports.agendar = function (app, req, res) {
     res.render('aluno/agendar', { flagAluno: req.session.aluno });
 }
 module.exports.login = function (app, req, res) {
-    console.log(req.session.erro);
     res.render('aluno/login', { errors: req.session.erro , flagAluno: req.session.aluno});
 };
+module.exports.remarcar = function (app, req, res) {
+    if (req.session.aluno == undefined){
+        req.session.erro = [{msg: 'Você precisa estar logado para acessar essa página'}];
+        res.redirect('/login');
+    }else{
+        const idAgendamento = req.query.id;
+        const connection = app.config.dbConnection();
+        const agendamentoDAO = new app.app.models.AgendamentoDAO(connection);
+        agendamentoDAO.getAgendamentoById(idAgendamento, function (error, result) {
+            if(result[0].id_aluno == req.session.aluno){
+                agendamentoDAO.getAlunoById(req.session.aluno, function (error, resultAluno) {
+                    res.render('aluno/remarcar', { agendamento: result[0],  flagAluno: req.session.aluno });
+                });
+            }else{
+                req.session.erro = [{msg: 'Você não tem permissão para acessar essa página'}];
+                res.redirect('/dashboard');
+            }
+        });
+    }
+}
+module.exports.authRemarcar = function (app, req, res) {
+    const dadosForm = req.body;
+    console.log(dadosForm);
+    const connection = app.config.dbConnection();
+    const agendamentoDAO = new app.app.models.AgendamentoDAO(connection);
+    agendamentoDAO.editAgendamento(dadosForm, function (error, result) {
+        res.redirect('/dashboard');
+    });
+}
+    
 module.exports.deleteAgendamento = function (app,req,res){
     const idAgendamento = req.query.id;
     console.log(idAgendamento);

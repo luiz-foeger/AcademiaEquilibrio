@@ -7,6 +7,9 @@ AgendamentoDAO.prototype.getLogin = function (dadosForm, callback) {
 AgendamentoDAO.prototype.getAlunoById = function (idAluno, callback) {
     this._connection.query('SELECT * FROM alunos WHERE id = ?', idAluno, callback);
 }
+AgendamentoDAO.prototype.getAgendamentoById = function (idAgendamento, callback) {
+    this._connection.query('SELECT * FROM agendamentos WHERE id = ?', idAgendamento, callback);
+}
 AgendamentoDAO.prototype.getAgendamentosByAlunoId = function (idAluno, callback) {
     this._connection.query('SELECT * FROM agendamentos WHERE id_aluno = ?', idAluno, callback);
 }

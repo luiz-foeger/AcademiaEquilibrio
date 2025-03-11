@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Remarcar</title>
+</head>
+<body>
+    <%- include('../components/header') %>
+    <form action="/auth/remarcar" method="POST">
+        <div class="container-login">
+            <div class="card-login">
+                <fieldset>
+                    <legend>Qual horário prefere ser atendido?</legend>
+                    <select name="atividade" required disabled>
+                        <% switch (agendamento.atividade) {
+                            case 'Musculação':
+                                %>
+                                <option value="Musculação" selected>Musculação</option>
+                                <% break;
+                            case 'Yoga':
+                                %>
+                                <option value="Yoga" selected>Yoga</option>
+                                <% break;
+                        
+                            default:
+                                %>
+                                <option value="Pilates" selected>Pilates</option>
+                                <%
+                                break;
+                        } %>
+
+                    </select>
+                </fieldset>
+                <input type="datetime-local" name="data_hora" required>
+                <select name="duracao" required>
+                    <option value="30">30 minutos</option>
+                    <option value="60">60 minutos</option>
+                    <option value="90">90 minutos</option>
+                </select>
+                <fieldset>
+                    <legend>Instrutor</legend>
+                    <select name="nome_instrutor" required disabled>
+                        <% switch (agendamento.nome_instrutor) {
+                            case 'João':
+                                %>
+                                <option value="João" selected>João</option>
+                                <% break;
+                            case 'Maria':
+                                %>
+                                <option value="Maria" selected>Maria</option>
+                                <% break;
+                        
+                            default:
+                                %>
+                                <option value="Pedro" selected>Pedro</option>
+                                <%
+                                break;
+                        } %>
+                    </select>
+                </fieldset>
+                <input type="hidden" name="id" value="<%= agendamento.id %>">
+                <input type="hidden" name="id_aluno" value="<%= agendamento.id_aluno %>">
+                <input type="submit" value="Remarcar">
+            </div>
+        </div>
+    </form>
+    <%- include('../components/footer') %>
+    
+</body>
+</html>

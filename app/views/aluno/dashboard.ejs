@@ -26,7 +26,7 @@
                             <p>Duração: <%= agendamentos[i].duracao %> minutos</p></h1>
                             <section>
                                 <a href="/auth/deletar?id=<%= agendamentos[i].id %>">Cancelar agendamento</a>
-                                <a href="/auth/remacar?id=<%= agendamentos[i].id %>">Remarcar</a>
+                                <a href="/dashboard/remarcar?id=<%= agendamentos[i].id %>">Remarcar</a>
                             </section>
                         </div>
                         <% } %>
