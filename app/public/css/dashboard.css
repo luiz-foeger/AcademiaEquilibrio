@@ -3,14 +3,54 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  padding: 5em;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .dashboard p {
   font-size: 16px;
 }
 
+.agendamentos {
+  margin: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  flex-wrap:wrap;
+  width: 100%;
+}
+.agendamentos div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 40%;
+}
+.agendamentos div section{
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+.agendamentos div section a{
+  width: 100%;
+  height: 30%;
+}
 .dashboard a {
   margin-top: 10px;
   background-color: #000;
@@ -21,11 +61,14 @@
   border: 0px;
   border-radius: 40px;
   font-family: "Parkinsans", sans-serif;
+  transition: 0.2s;
 }
 
 .dashboard a:hover {
   background-color: #fff;
   color: #000;
+  border: 1px solid #000;
+
 }
 
 .container-login {

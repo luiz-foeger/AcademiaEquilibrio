@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
-    <title><%= aluno.nome.toUpperCase() %> - Dashboard</title>
+    <title>
+        <%= aluno.nome.toUpperCase() %> - Dashboard
+    </title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
 </head>
+
 <body>
     <%- include('../components/header') %>
 
-    <section class="dashboard">
-    <h2>Bem-vindo, <%= aluno.nome %>!</h2>
-    
-    <% if(agendamentos.length > 0){ %>
-        <% for(var i = 0; i < agendamentos.length; i++){ %>
-            <div>
-                <h5>Voce possui um agendamento:</h5>
-                <p>Atividade: <%= agendamentos[i].atividade %></p>
-                <p>Data e Hora: <%= agendamentos[i].data_hora %></p>
-                <p>Duração: <%= agendamentos[i].duracao %> minutos</p></h1>
-                <a href="/auth/deletar?id=<%= agendamentos[i].id %>">Cancelar agendamento</a>
-            </div>
-            <% } %>
-        <%}else{ %>
-            <p>Você ainda não possui agendamentos.</p>
-            <a href="/agendar">Agendar agora</a>    
-        <%}%>
+        <main class="dashboard">
+            <h2>Bem-vindo, <%= aluno.nome %>!</h2>
+            
+            <section class="agendamentos">
+                <% if(agendamentos.length > 0){ %>
+                    <% for(var i = 0; i < agendamentos.length; i++){ %>
+                        <div>
+                            <h5>Voce possui um agendamento:</h5>
+                            <p>Atividade: <%= agendamentos[i].atividade %></p>
+                            <p>Data e Hora: <%= agendamentos[i].data_hora %></p>
+                            <p>Duração: <%= agendamentos[i].duracao %> minutos</p></h1>
+                            <section>
+                                <a href="/auth/deletar?id=<%= agendamentos[i].id %>">Cancelar agendamento</a>
+                                <a href="/auth/remacar?id=<%= agendamentos[i].id %>">Remarcar</a>
+                            </section>
+                        </div>
+                        <% } %>
+                    <%}else{ %>
+                        <p>Você ainda não possui agendamentos.</p>
+                        <a href="/agendar">Agendar agora</a>    
+                    <%}%>
+            </section>
 
-    </section>
 
-    <%- include('../components/footer') %>
+        </main>
+
+        <%- include('../components/footer') %>
 </body>
+
 </html>
