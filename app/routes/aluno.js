@@ -20,7 +20,7 @@ module.exports = function(app, req, res){
     app.get('/auth/deletar', function(req, res){
         app.app.controllers.aluno.deleteAgendamento(app, req, res);
     });
-    app.get('/dashboard/remarcar', function(req, res){
+    app.get('/remarcar', function(req, res){
         app.app.controllers.aluno.remarcar(app, req, res);
     });
     app.post('/auth/remarcar', function(req, res){
