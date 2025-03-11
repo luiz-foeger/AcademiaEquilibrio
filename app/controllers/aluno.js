@@ -19,7 +19,15 @@ module.exports.login = function (app, req, res) {
     console.log(req.session.erro);
     res.render('aluno/login', { errors: req.session.erro , flagAluno: req.session.aluno});
 };
-
+module.exports.deleteAgendamento = function (app,req,res){
+    const idAgendamento = req.query.id;
+    console.log(idAgendamento);
+    const connection = app.config.dbConnection();
+    const agendamentoDAO = new app.app.models.AgendamentoDAO(connection);
+    agendamentoDAO.deleteAgendamento(idAgendamento, function (error, result) {
+        res.redirect('/dashboard');
+    });
+}
 module.exports.authLogin = function (app, req, res) {
     //console.log(req.body);
     const dadosForm = req.body;

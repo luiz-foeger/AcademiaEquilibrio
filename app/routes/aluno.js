@@ -17,4 +17,7 @@ module.exports = function(app, req, res){
     app.post('/auth/agendar', function(req, res){
         app.app.controllers.aluno.authAgendar(app, req, res);
     });
+    app.get('/auth/deletar', function(req, res){
+        app.app.controllers.aluno.deleteAgendamento(app, req, res);
+    });
 }

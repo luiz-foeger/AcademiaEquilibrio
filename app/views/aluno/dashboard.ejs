@@ -19,6 +19,7 @@
                 <p>Atividade: <%= agendamentos[i].atividade %></p>
                 <p>Data e Hora: <%= agendamentos[i].data_hora %></p>
                 <p>Duração: <%= agendamentos[i].duracao %> minutos</p></h1>
+                <a href="/auth/deletar?id=<%= agendamentos[i].id %>">Cancelar agendamento</a>
             </div>
             <% } %>
         <%}else{ %>
