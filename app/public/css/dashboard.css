@@ -12,6 +12,10 @@
   font-size: 16px;
 }
 
+.sem-agendamentos a {
+  margin-bottom: 20px;
+}
+
 .agendamentos {
   margin: 2em;
   display: flex;
@@ -20,7 +24,7 @@
   justify-content: center;
   text-align: center;
   box-sizing: border-box;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -36,13 +40,13 @@
   /* border: 1px solid #000; */
   border-radius: 10px;
   width: 40%;
-  -webkit-box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.070);
-  -moz-box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.070);
-  box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.070);
+  -webkit-box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
 }
 
-.agendamentos div section{
+.agendamentos div section {
   max-width: 100%;
   height: 100%;
   display: flex;
@@ -54,7 +58,7 @@
   padding: 1em;
 }
 
-.agendamentos div section a{
+.agendamentos div section a {
   width: 100%;
   height: 30%;
 }

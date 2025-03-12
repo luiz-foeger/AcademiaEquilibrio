@@ -24,7 +24,8 @@
                         <div>
                             <h5>Voce possui um agendamento:</h5>
                             <p>Atividade: <%= agendamentos[i].atividade %></p>
-                            <p>Data e Hora: <%= agendamentos[i].data_hora %></p>
+                            <p><span class="data-hora" data-valor="<%= agendamentos[i].data_hora %>"></span></p>
+                            <p>Instrutor: <%= agendamentos[i].nome_instrutor %></p></h1>
                             <p>Duração: <%= agendamentos[i].duracao %> minutos</p></h1>
                             <section>
                                 <a href="/auth/deletar?id=<%= agendamentos[i].id %>">Cancelar</a>
@@ -45,5 +46,24 @@
 
         <%- include('../components/footer') %>
 </body>
+<script>
+    function formatarDataHora(dataHora) {
+        const data = new Date(dataHora);
+        const opcoesData = { weekday: 'long', day: '2-digit', month: 'short', year: 'numeric' };
+        const dataFormatada = data.toLocaleDateString('pt-BR', opcoesData).replace(',', '');
+        
+        const opcoesHora = { hour: '2-digit', minute: '2-digit', hour12: false };
+        const horaFormatada = data.toLocaleTimeString('pt-BR', opcoesHora);
+
+        return `${dataFormatada} ${horaFormatada}h`;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".data-hora").forEach(element => {
+            const dataOriginal = element.getAttribute("data-valor");
+            element.textContent = formatarDataHora(dataOriginal);
+        });
+    });
+</script>
 
 </html>
